@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+main {
+    margin-top: 0.3rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header"
+                         "splitter splitter"
+                         "namelabel nameinput"
+                         "classlabel classinput"
+                         "clearbutton submitbutton"
+                         "display display";
+}
+
+nav {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    background-color: white;
+    padding: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-radius: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+hr {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    grid-area: splitter;
+}
+
+label[for="name"] {
+    grid-area: namelabel;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+#name {
+    grid-area: nameinput;
+    margin: 0.5rem;
+    padding: 0.3rem;
+}
+
+label[for="clazz"] {
+    grid-area: classlabel;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+#clazz {
+    grid-area: classinput;
+    margin: 0.5rem;
+    padding: 0.3rem;
+}
+
+.display {
+    grid-area: display;
+}
+
+.clear-wrapper,
+.submit-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clear,
+.submit {
+    padding: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background-color: white;
+    color: black;
+    border: 0;
+    border-radius: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.display {
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error {
+    color: red;
+}
+
+nav > ul {
+    display: flex;
+    list-style: none;
+}
+
+nav > ul > li {
+    margin: 0.5rem;
+}
